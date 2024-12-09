@@ -1,0 +1,73 @@
+.gallery {
+    display: flex;
+    justify-content: space-between; /* 图片之间的间距 */
+    flex-wrap: wrap; /* 自动换行 */
+    gap: 20px; /* 设置图片之间的间距 */
+    padding: 50px;
+}
+
+.box {
+    flex: 1 1 28%; /* 每个box占宽度的28% */
+    position: relative; /* 确保图片定位在容器内部 */
+    overflow: hidden; /* 避免图片溢出父容器 */
+    transition: transform 0.3s ease; /* 平滑过渡效果 */
+    display: flex; /* 使用 flexbox 对齐内容 */
+    align-items: center; /* 垂直居中 */
+    justify-content: center; /* 水平居中 */
+    padding:20px;
+}
+
+.image {
+    width: 100%; /* 图片宽度填充容器 */
+    height: 100%; /* 图片高度填充容器 */
+    object-fit: cover; /* 保持图片比例，同时裁剪多余部分以填满容器 */
+    border-radius: 30px; /* 保持与 .box 的圆角一致 */
+    padding:30px;
+}
+
+
+.box:hover{
+    transform: scale(1.05);
+} 
+
+.modal {
+    display: none; /* 默认隐藏 */
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* 半透明背景 */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+}
+
+@media (max-width: 768px) {
+
+
+    .box {
+        padding: 0;
+        margin: 0;
+        
+    }
+
+
+}
