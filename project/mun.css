@@ -1,0 +1,23 @@
+.muncontent{
+    
+    text-align: center;
+    justify-content: center;
+
+    align-items: center;
+    margin-top: 8vh;
+    padding-left: 5%;
+    padding-right: 5%;
+    display: flex;
+    flex-direction: column;
+}
+
+.munimage{
+    width: 70%;
+    padding-top: 20px;
+}
+
+.muntext{
+    font-size: 20px;
+    
+}
+
