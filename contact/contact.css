@@ -1,0 +1,91 @@
+.contact {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.box {
+    width: 30%;
+    align-content: center;
+
+    text-align: center;
+    position: relative;
+}
+
+.name {
+    font-size: 30px;
+    padding: 20px;
+}
+
+.imgae {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    margin: 0 auto;
+    transition: 0.3s ease-in-out;
+}
+
+.imgae img {
+    width: 100%;
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+.imgae:hover img {
+    opacity: 0;
+}
+
+
+.imgae:hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("bili-hover.jpg");
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+.box:nth-child(2) .imgae:hover::before {
+    background-image: url('ig-hover.png');
+}
+
+.box:nth-child(3) .imgae:hover::before {
+    background-image: url('wechat-hover.jpg');
+}
+
+#just {
+    padding: 20px;
+    font-size: 40px;
+    width: 100%;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    #just {
+        max-width: 90vw;
+        font-size: large;
+    }
+
+    .box {
+        padding: 0;
+        width: 27%;
+        margin: 0;
+    }
+
+    .name {
+        font-size: 5vw;
+        padding: 0;
+        margin: 0;
+    }
+
+    .contact {
+        gap: 10px;
+    }
+
+}
