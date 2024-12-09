@@ -1,0 +1,125 @@
+/* 容器样式 */
+.scroll-list-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    
+    white-space: nowrap;
+    
+}
+
+/* 渐变效果 */
+.scroll-list-container::before,
+.scroll-list-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 20%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+
+.scroll-list-container::before {
+    left: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+
+
+.scroll-list-container::after {
+    right: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+} 
+
+/* 通用列表样式 */
+.scroll-list1, .scroll-list2 {
+    list-style: none; /* 移除默认圆点 */
+    padding: 0; /* 移除内边距 */
+    margin: 0; /* 移除外边距 */
+    display: inline-flex;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    
+   
+    font-family: Roboto;
+    font-weight: 900;
+    font-size: 110px;
+    line-height: 1px; 
+    vertical-align: text-top;
+}
+
+/* 列表项样式 */
+.scroll-list1 li, .scroll-list2 li {
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: rgb(255, 255, 255);
+    color: #4CBDFF;
+    flex: 0 0 auto;
+    text-align: center;
+    vertical-align: middle; /* 确保列表项垂直居中 */
+}
+
+/* 滚动动画 */
+@keyframes scroll-left-to-right {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes scroll-right-to-left {
+    0% {
+        transform: translateX(-50%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.scroll-list1{
+    animation: scroll-left-to-right 25s linear infinite;
+    transform-origin: 100% 50%;
+    line-height: 0.0000001;
+}
+
+.scroll-list2{
+    animation: scroll-right-to-left 25s linear infinite;
+    transform-origin: 0% 50%;
+    line-height: 0.000001;
+}
+
+.selfie{
+    position: absolute;  /* 绝对定位，相对于容器定位 */
+    top: 50%;  /* 垂直方向居中 */
+    left: 50%; /* 水平方向居中 */
+    transform: translate(-50%, -50%);  /* 通过平移确保居中 */
+    z-index: 10;  /* 确保图片在文字之上 */
+    width: 15vw;  /* 图片宽度 */
+    height: auto; /* 图片高度 */
+    border-radius: 8vw;
+    border: 3px solid #4CBDFF;
+
+    transition: transform 0.1s ease-out; 
+}
+
+@media (max-width: 768px) {
+
+    
+.selfie{
+    width: 50vw;
+    border-radius: 25vw;
+}
+
+
+
+
+
+}
+
+

@@ -1,0 +1,120 @@
+.title {
+    font-size: 50px;
+    font-weight: 200;
+    color: #4CBDFF;
+    padding-left: 50px;
+}
+
+.breif {
+    margin: 30px;
+}
+
+.image {
+    width: 100px;
+    height: auto;
+}
+
+.horizontal-scroll {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 10px;
+    padding: 10px;
+    list-style: none;
+
+
+}
+
+
+.horizontal-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+.image {
+    width: 400px;
+    height: 300px;
+    /* 保持图片比例 */
+    border-radius: 8px;
+    /* 可选：图片圆角效果 */
+    object-fit: cover;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* 可选：阴影效果 */
+}
+
+
+
+#line {
+    width: 90%;
+    height: 1.6px;
+    background-color: #4CBDFF;
+    margin: 20px;
+}
+
+.breifprojectcon {
+    display: flex;
+    margin: 20px;
+}
+
+.each {
+
+    width: 33%;
+    margin: 5px;
+    text-align: center;
+    align-items: center;
+}
+
+.each:hover {
+    transform: scale(1.05);
+    transition: 0.3s ease-in-out;
+}
+
+.breifpicture {
+    width: 100%;
+
+}
+
+#bz {
+    max-width: 100%;
+
+}
+
+.link {
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.breifpic {
+    display: block;
+    width: fit-content;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+
+    .image {
+        max-height: 300px;
+        width: auto;
+    }
+
+    .title {
+        font-size: xx-large;
+    }
+
+    .breifprojectcon {
+        display: block;
+    }
+    .horizontal-scroll{
+        height: 40vh;
+    }
+
+    .breifpic {
+        width: 70vw;
+        height: auto;
+        margin: 0;
+    }
+    .each{
+        width: 100%;
+    }
+}
